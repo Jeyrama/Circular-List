@@ -13,3 +13,21 @@ Your list constructor/init code should throw an Exception if nothing is passed i
 
 
 // Solution
+
+class CircularList {
+  constructor(...args) {
+    this.arr = [...args];
+    if (!args || this.arr.length < 1) throw "Error";
+    this.count = -1;
+  }
+  
+  next() {
+    this.count = (this.count + 2 > this.arr.length) ? this.count = 0 : this.count + 1
+    return this.arr[this.count];
+  }
+  
+  prev() {
+    this.count = (this.count - 1 < 0) ? this.arr.length - 1 : this.count - 1
+    return this.arr[this.count];
+  }
+}
