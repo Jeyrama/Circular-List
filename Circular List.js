@@ -31,3 +31,5 @@ class CircularList {
     return this.arr[this.count];
   }
 }
+
+// or
