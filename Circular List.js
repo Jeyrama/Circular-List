@@ -33,3 +33,22 @@ class CircularList {
 }
 
 // or
+
+class CircularList {
+  constructor(...args) {
+    if(!args.length){throw new Error()}
+    this.circularList = [...args];
+    this.currentElement = -1;
+  }
+  next() {
+    this.currentElement++;
+    if(this.currentElement > this.circularList.length - 1) this.currentElement = 0;
+    return this.circularList[this.currentElement];
+  }
+  prev() {
+	this.currentElement--;
+  if(this.currentElement < 0) this.currentElement = this.circularList.length - 1;
+	
+	    return this.circularList[this.currentElement];
+  }
+}
