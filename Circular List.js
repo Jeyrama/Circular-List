@@ -10,3 +10,6 @@ At this point, five invocations of prev() in a row should return 4, 3, 2, 1 and 
 Your CircularList is created by passing a vargargs parameter in, e.g. new CircularList(1, 2, 3). 
 Your list constructor/init code should throw an Exception if nothing is passed in.
 */
+
+
+// Solution
